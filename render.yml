@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: prometheus
+    name: schedulepro-prometheus
     env: docker
     dockerfilePath: ./Dockerfile
     # Puerto que expone Prometheus (por defecto 9090)
