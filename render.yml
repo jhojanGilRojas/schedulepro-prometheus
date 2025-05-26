@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: prometheus
+    env: docker
+    dockerfilePath: ./Dockerfile
+    # Puerto que expone Prometheus (por defecto 9090)
+    ports:
+      - 9090
+    healthCheckPath: /-/healthy
+    autoDeploy: true
+    plan: free
+    # Variables de entorno si necesitas (opcional)
+    envVars:
+      - key: PROMETHEUS_CONFIG_PATH
+        value: /etc/prometheus/prometheus.yml

@@ -1,0 +1,5 @@
+scrape_configs:
+  - job_name: 'schedulepro-webapp'
+    metrics_path: '/actuator/prometheus'  # si usas Spring Boot Actuator
+    static_configs:
+      - targets: ['schedulepro.onrender.com:8080']  # o el puerto público, si es diferente
